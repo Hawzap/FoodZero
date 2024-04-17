@@ -1,0 +1,6 @@
+@mixin setBackgroundImage($imgSrc) {
+    background-image: url(#{$imgSrc});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}

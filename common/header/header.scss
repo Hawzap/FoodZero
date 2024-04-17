@@ -1,0 +1,315 @@
+.helloBlock {
+    color: white;
+    background-color: #233000;
+    padding-bottom: 185px;
+}
+
+header {
+    color: white;
+    padding-top: 60px;
+    margin-bottom: 135px;
+}
+
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+}
+.siteName {
+    display: flex;
+    align-items: center;
+    .title {
+        display: inline-block;
+        position: relative;
+        font-size: 52px;
+        margin-right: 45px;
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 150px;
+            height: 20px;
+            border: 2px white solid;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &::after {
+            bottom: -15px;
+            border-top: none;
+        }
+
+        &::before {
+            top: -15px;
+            border-bottom: none;
+        }
+    }
+    .burgerMenu {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 46px;
+        height: 30px;
+        cursor: pointer;
+        span,
+        &::after,
+        &::before {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+        }
+        &::after,
+        &::before {
+            content: "";
+
+            position: absolute;
+        }
+        &::after {
+            bottom: 0;
+        }
+
+        &::before {
+            top: 0;
+        }
+        span {
+        }
+    }
+}
+
+.contacts {
+    display: flex;
+    align-items: center;
+    .number {
+        font-size: 22px;
+        margin-right: 26px;
+    }
+    .bookPlace {
+        display: block;
+        font-size: 28px;
+        padding: 12px 35px;
+        border: 2px solid white;
+        outline: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .helloBlock {
+        padding-bottom: 140px;
+    }
+
+    header {
+        color: white;
+        padding-top: 60px;
+        margin-bottom: 105px;
+    }
+
+    .headerContent {
+        display: flex;
+        justify-content: space-between;
+    }
+    .siteName {
+        display: flex;
+        align-items: center;
+        .title {
+            display: inline-block;
+            position: relative;
+            font-size: 40px;
+            margin-right: 30px;
+            &::after,
+            &::before {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 110px;
+                height: 15px;
+                border: 2px white solid;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            &::after {
+                bottom: -12px;
+                border-top: none;
+            }
+
+            &::before {
+                top: -12px;
+                border-bottom: none;
+            }
+        }
+        .burgerMenu {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 28px;
+            height: 23px;
+            &::after,
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: #fff;
+            }
+            &::after {
+                bottom: 0;
+            }
+
+            &::before {
+                top: 0;
+            }
+            span {
+                display: block;
+                width: 100%;
+                height: 2px;
+                background-color: #fff;
+            }
+        }
+    }
+
+    .contacts {
+        display: flex;
+        align-items: center;
+        .number {
+            font-size: 19px;
+            margin-right: 22px;
+        }
+        .bookPlace {
+            display: block;
+            font-size: 24px;
+            padding: 11px 22px;
+            border: 2px solid white;
+            outline: none;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .helloBlock {
+        padding-bottom: 85px;
+    }
+
+    header {
+        margin-bottom: 90px;
+    }
+    .siteName {
+        justify-content: space-between;
+        width: 100%;
+        .title {
+            display: inline-block;
+            position: relative;
+            font-size: 38px;
+            margin-right: 30px;
+            &::after,
+            &::before {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 102px;
+                height: 12px;
+                border: 2px white solid;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            &::after {
+                bottom: -10px;
+                border-top: none;
+            }
+
+            &::before {
+                top: -10px;
+                border-bottom: none;
+            }
+        }
+        .burgerMenu {
+            width: 36px;
+            height: 27px;
+        }
+    }
+
+    .contacts {
+        display: none;
+        .number {
+            font-size: 19px;
+            margin-right: 22px;
+        }
+        .bookPlace {
+            display: block;
+            font-size: 24px;
+            padding: 11px 22px;
+            border: 2px solid white;
+            outline: none;
+        }
+    }
+}
+
+@media (max-width: 412px) {
+    .siteName {
+        .title {
+            font-size: 36px;
+            &::after,
+            &::before {
+                width: 100px;
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .helloBlock {
+        padding-bottom: 85px;
+    }
+
+    header {
+        margin-bottom: 85px;
+    }
+    .siteName {
+        justify-content: space-between;
+        width: 100%;
+        .title {
+            display: inline-block;
+            position: relative;
+            font-size: 30px;
+            margin-right: 30px;
+            &::after,
+            &::before {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 88px;
+                height: 12px;
+                border: 2px white solid;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            &::after {
+                bottom: -10px;
+                border-top: none;
+            }
+
+            &::before {
+                top: -10px;
+                border-bottom: none;
+            }
+        }
+        .burgerMenu {
+            width: 36px;
+            height: 23px;
+        }
+    }
+
+    .contacts {
+        display: none;
+        .number {
+            font-size: 19px;
+            margin-right: 22px;
+        }
+        .bookPlace {
+            display: block;
+            font-size: 24px;
+            padding: 11px 22px;
+            border: 2px solid white;
+            outline: none;
+        }
+    }
+}
