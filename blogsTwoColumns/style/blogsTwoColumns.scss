@@ -4,7 +4,7 @@
 
 header {
     display: block;
-    @include setBackgroundImage("../img/blogsHeaderBg.png");
+    @include setBackgroundImage("../img/blogsHeaderBg.png", "cover");
     margin: 0;
     padding-bottom: 245px;
     .subheader {

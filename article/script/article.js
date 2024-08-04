@@ -27,7 +27,7 @@ const splitText = (element) => {
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.from(".title h1", {
-    x: -120,
+    ...(window.innerWidth > 480 ? { x: -120 } : { y: -120 }),
     opacity: 0,
     duration: 0.5,
 });
@@ -283,18 +283,15 @@ gsap.from(".articleInfo .userInfo .mainInfo .description", {
     },
 });
 
-const previousArticleTl = gsap.timeline({
+const switchArticleTlProp = {
     scrollTrigger: {
         trigger: ".switchArticle",
         start: "-15% 80%",
     },
-});
-const nextArticleTl = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".switchArticle",
-        start: "-15% 80%",
-    },
-});
+};
+
+const previousArticleTl = gsap.timeline(switchArticleTlProp);
+const nextArticleTl = gsap.timeline(switchArticleTlProp);
 
 previousArticleTl
     .from(".previousArticle", {

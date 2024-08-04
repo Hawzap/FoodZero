@@ -107,8 +107,11 @@ meals.forEach((e) => {
         );
 });
 
-const meal = document.querySelector(".meal");
+const meal = document.querySelectorAll(".meal");
 
-meal.addEventListener("click", () => {
-    window.location = "http://127.0.0.1:5500/foodZero/foodDescription.html";
+meal.forEach((e) => {
+    e.addEventListener("click", () => {
+        window.location =
+            "http://127.0.0.1:5500/foodZero/foodDescription/foodDescription.html";
+    });
 });

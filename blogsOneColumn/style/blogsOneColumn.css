@@ -1,6 +1,6 @@
 header {
   display: block;
-  background-image: url("../img/blogsHeaderBg.png");
+  background-image: url(../img/blogsHeaderBg.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -138,9 +138,9 @@ header .subheader p {
   display: block;
   width: 46px;
   height: 26px;
-  background-image: url("../../common/icons/arrow.svg");
-  background-repeat: no-repeat;
+  background-image: url(../../common/icons/arrow.svg);
   background-size: contain;
+  background-repeat: no-repeat;
   background-position: center center;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -258,9 +258,9 @@ header .subheader p {
     display: block;
     width: 46px;
     height: 26px;
-    background-image: url("../../common/icons/arrow.svg");
-    background-repeat: no-repeat;
+    background-image: url(../../common/icons/arrow.svg);
     background-size: contain;
+    background-repeat: no-repeat;
     background-position: center center;
     -webkit-transition: 0.3s;
     transition: 0.3s;

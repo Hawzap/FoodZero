@@ -2,7 +2,7 @@
 
 header {
     display: block;
-    @include setBackgroundImage("../img/menuHeaderBg.png");
+    @include setBackgroundImage("../img/menuHeaderBg.png", "cover");
     margin: 0;
     padding-bottom: 230px;
     .headerContent {
@@ -214,8 +214,6 @@ header {
 
 // ===== ADAPTIVE =====
 
-@media (max-width: 1200px) {
-}
 @media (max-width: 768px) {
     // ===== HEADER =====
 
@@ -281,6 +279,20 @@ header {
     }
 }
 @media (max-width: 480px) {
+    header {
+        padding-bottom: 150px;
+        .headerContent {
+            margin-bottom: 120px;
+        }
+        .subheader {
+            h1 {
+                font-size: 75px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+    }
     // ===== MEAL =====
 
     .meals {

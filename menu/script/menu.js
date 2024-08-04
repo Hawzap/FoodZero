@@ -1,23 +1,28 @@
 gsap.registerPlugin(ScrollTrigger);
+
+const checkWidth = window.innerWidth > 480;
+const meals = document.querySelectorAll(".meal");
+const mealMenu = document.querySelectorAll(".item");
+
 const titleTl = gsap.timeline();
 titleTl
     .from(".subheader h1", {
-        x: -100,
+        ...(checkWidth ? { x: -100 } : { y: -80 }),
+        // x: -100,
         opacity: 0,
         duration: 0.6,
     })
     .from(
         ".subheader p",
         {
-            x: -80,
+            ...(checkWidth ? { x: -80 } : { y: -80 }),
+            // x: -80,
             opacity: 0,
             duration: 0.6,
         },
         "-=0.3"
     );
 
-const meals = document.querySelectorAll(".meal");
-const mealMenu = document.querySelectorAll(".item");
 meals.forEach((e) => {
     const mealTitle = e.children[0].children[0];
     const mealDesc = e.children[0].children[1];
@@ -28,7 +33,6 @@ meals.forEach((e) => {
             start: "-10% 70%",
         },
     });
-    const mealTl = gsap.timeline();
     mealTitleTl
         .from(mealTitle, {
             y: -120,
@@ -45,12 +49,12 @@ meals.forEach((e) => {
             "-=0.3"
         );
     gsap.from(mealImg, {
-        x: -140,
+        ...(checkWidth ? { x: -140 } : { y: 140 }),
         opacity: 0,
         duration: 0.6,
         scrollTrigger: {
             trigger: mealImg,
-            start: "-10% 65%",
+            start: checkWidth ? "-10% 65%" : "-20% 80%",
         },
     });
 });

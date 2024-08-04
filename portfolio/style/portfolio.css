@@ -1,6 +1,6 @@
 header {
   display: block;
-  background-image: url("../img/portfolioHeaderBg.png");
+  background-image: url(../img/portfolioHeaderBg.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

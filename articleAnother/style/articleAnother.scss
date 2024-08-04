@@ -4,7 +4,7 @@
 
 header {
     display: block;
-    @include setBackgroundImage("../img/rawMeat.png");
+    @include setBackgroundImage("../img/rawMeat.png", "cover");
     margin: 0;
     padding-bottom: 135px;
     .subheader {
@@ -120,7 +120,10 @@ header {
                 justify-content: center;
                 padding: 172.5px 0;
                 margin-bottom: 110px;
-                @include setBackgroundImage("../img/personeCooking.png");
+                @include setBackgroundImage(
+                    "../img/personeCooking.png",
+                    "cover"
+                );
                 blockquote {
                     position: relative;
                     color: white;
@@ -172,6 +175,7 @@ header {
             .userInfo {
                 display: flex;
                 align-items: center;
+                overflow-x: hidden;
                 .userPhoto {
                     width: 200px;
                     height: 200px;

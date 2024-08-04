@@ -6,13 +6,14 @@
     position: absolute;
     width: 100%;
     height: 100%;
+
     .bg {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
-        z-index: 100;
+        min-height: 350%;
+        z-index: 5;
         background-color: #233000;
     }
 
@@ -20,19 +21,18 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        z-index: 101;
+        z-index: 6;
         transform: translate(-50%, -50%);
         .ghostTitle {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 52px;
             font-weight: 700;
             opacity: 0;
             visibility: hidden;
         }
-        .mainLine {
+        .mainLinePr {
             display: block;
             position: absolute;
             left: 50%;
@@ -41,8 +41,7 @@
             height: 2px;
             background-color: #fff;
             transform-origin: center;
-            .subLine:first-child,
-            .subLine:last-child {
+            .subLinePr {
                 position: absolute;
                 display: block;
                 height: 20px;
@@ -51,30 +50,27 @@
             }
             &:first-child {
                 top: -15px;
-                .subLine:first-child,
-                .subLine:last-child {
+                .subLinePr {
                     transform-origin: top;
                 }
-                .subLine:first-child {
+                .subLinePr:first-child {
                     left: 0;
                 }
-                .subLine:last-child {
+                .subLinePr:last-child {
                     right: 0;
                 }
             }
             &:last-child {
                 top: auto;
                 bottom: -16px;
-                .subLine:first-child,
-                .subLine:last-child {
+                .subLinePr {
                     transform-origin: bottom;
+                    bottom: 100%;
                 }
-                .subLine:first-child {
-                    transform: translateY(-100%);
+                .subLinePr:first-child {
                     left: 0;
                 }
-                .subLine:last-child {
-                    transform: translateY(-100%);
+                .subLinePr:last-child {
                     right: 0;
                 }
             }
@@ -88,6 +84,7 @@
                 position: relative;
                 font-size: 90px;
                 font-weight: 700;
+                pointer-events: none;
                 color: white;
                 &:first-child {
                     transform: translateY(-100%);
@@ -132,7 +129,6 @@
         position: absolute;
         top: 106px;
         right: 0;
-
         img {
             width: 640px;
         }
@@ -651,7 +647,7 @@
         position: absolute;
         width: 195px;
         height: 195px;
-        @include setBackgroundImage("../img/quote.png");
+        @include setBackgroundImage("../../common/img/quote.png");
         top: -20px;
         right: -70px;
         z-index: -1;
@@ -715,6 +711,7 @@
                 width: 495px;
             }
             .spices {
+                overflow-x: hidden;
                 left: -233px;
                 img {
                     width: 155px;
@@ -915,10 +912,11 @@
         padding: 130px 0;
         .reservation {
             .reservationForms {
-                .selectDate,
-                .selectTime,
-                .persoNumber {
+                .fieldWrapper {
                     width: calc((100% / 3) - 25px);
+                }
+                .field {
+                    width: 100%;
                 }
             }
         }
@@ -1219,6 +1217,7 @@
     }
     .meals {
         display: block;
+        overflow-x: hidden;
         .meal {
             width: 425px;
             margin: 0 auto;
@@ -1281,6 +1280,7 @@
         .arrows {
             display: flex;
             align-items: center;
+            overflow-x: hidden;
             img:first-child {
                 width: 30px;
             }

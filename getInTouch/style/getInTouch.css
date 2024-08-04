@@ -90,7 +90,7 @@ header .subheader .workTime .workTime-wrapper .schedule p:first-child {
   width: 330px;
   height: 330px;
   background-image: url(../../common/icons/orange.png);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   z-index: -1;
@@ -171,6 +171,7 @@ header .subheader .workTime .workTime-wrapper .schedule p:first-child {
 .makingReservation {
   padding: 150px 0;
   background-color: #ebf0e4;
+  overflow-x: hidden;
 }
 .makingReservation .reservationTitle {
   position: relative;
@@ -185,7 +186,7 @@ header .subheader .workTime .workTime-wrapper .schedule p:first-child {
   top: -118px;
   left: -25px;
   background-image: url(../img/mint.png);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -298,6 +299,7 @@ header .subheader .workTime .workTime-wrapper .schedule p:first-child {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    overflow-x: hidden;
   }
   header .subheader .workTime .workTime-wrapper {
     width: 550px;

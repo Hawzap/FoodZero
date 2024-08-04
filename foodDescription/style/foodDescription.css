@@ -28,6 +28,7 @@ header .subheader h1 {
 .foodTypes {
   padding-top: 25px;
   padding-bottom: 170px;
+  overflow-x: hidden;
 }
 .foodTypes .description {
   max-width: 385px;
@@ -104,6 +105,7 @@ header .subheader h1 {
 }
 
 .pageSwitcher {
+  overflow-x: hidden;
   background-color: #ebf0e4;
   padding: 125px 0;
 }
@@ -147,7 +149,7 @@ header .subheader h1 {
   width: 25px;
   height: 12px;
   background-image: url(../../common/icons/arrow.svg);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-transition: 0.3s;

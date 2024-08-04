@@ -2,7 +2,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const scrollTriggerProps = {
     trigger: ".footer-firstBlock",
-    start: "-10% 75%",
+    start: window.innerWidth > 1200 ? "135% 40%" : "-10% 75%",
 };
 
 gsap.from(".siteName h2 p:first-child", {

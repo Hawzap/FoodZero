@@ -4,7 +4,7 @@
 
 header {
     display: block;
-    @include setBackgroundImage("../img/articleHeaderBg.png");
+    @include setBackgroundImage("../img/articleHeaderBg.png", "cover");
     margin: 0;
     padding-bottom: 135px;
     .subheader {
@@ -137,9 +137,10 @@ header {
                     }
                 }
             }
-            .userInfo {
+            .authorInfo {
                 display: flex;
                 align-items: center;
+                overflow-x: hidden;
                 .userPhoto {
                     width: 200px;
                     height: 200px;
@@ -284,6 +285,7 @@ header {
 .switchArticle {
     display: flex;
     justify-content: space-between;
+    overflow-x: hidden;
     .previousArticle,
     .nextArticle {
         display: flex;

@@ -1,7 +1,7 @@
 @use "../../common/mixins.scss" as *;
 header {
     display: block;
-    @include setBackgroundImage("../img/portfolioHeaderBg.png");
+    @include setBackgroundImage("../img/portfolioHeaderBg.png", "cover");
     margin: 0;
     padding-bottom: 305px;
     .headerContent {

@@ -1,6 +1,6 @@
 header {
   display: block;
-  background-image: url("../img/articleHeaderBg.png");
+  background-image: url(../img/articleHeaderBg.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -144,10 +144,10 @@ header .subheader .postInfo .circle {
   display: block;
   width: 195px;
   height: 195px;
-  background-image: url("../img/quote.png");
+  background-image: url(../img/quote.png);
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: contain;
 }
 .artcileMainText .artcileMainText-content .articleInfo .tags {
   display: -webkit-box;
@@ -177,26 +177,27 @@ header .subheader .postInfo .circle {
   font-size: 16px;
   font-family: "Lato", sans-serif;
 }
-.artcileMainText .artcileMainText-content .articleInfo .userInfo {
+.artcileMainText .artcileMainText-content .articleInfo .authorInfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow-x: hidden;
 }
-.artcileMainText .artcileMainText-content .articleInfo .userInfo .userPhoto {
+.artcileMainText .artcileMainText-content .articleInfo .authorInfo .userPhoto {
   width: 200px;
   height: 200px;
   border-radius: 100%;
   margin-right: 50px;
 }
-.artcileMainText .artcileMainText-content .articleInfo .userInfo .userName {
+.artcileMainText .artcileMainText-content .articleInfo .authorInfo .userName {
   font-weight: 700;
   font-size: 32px;
   margin-bottom: 25px;
 }
-.artcileMainText .artcileMainText-content .articleInfo .userInfo .description {
+.artcileMainText .artcileMainText-content .articleInfo .authorInfo .description {
   font-family: "Lato", sans-serif;
   color: #4d4d4d;
   font-size: 21px;
@@ -354,6 +355,7 @@ header .subheader .postInfo .circle {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow-x: hidden;
 }
 .switchArticle .previousArticle,
 .switchArticle .nextArticle {

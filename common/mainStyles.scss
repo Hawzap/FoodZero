@@ -253,10 +253,13 @@ li {
         padding: 130px 0;
         .reservation {
             .reservationForms {
+                .fieldWrapper {
+                    width: calc((100% / 3) - 25px);
+                }
                 .selectDate,
                 .selectTime,
                 .persoNumber {
-                    width: calc((100% / 3) - 25px);
+                    width: 100%;
                 }
             }
         }
@@ -282,9 +285,7 @@ li {
                 gap: 35px 0;
                 flex-wrap: wrap;
                 .fieldWrapper,
-                .selectDate,
-                .selectTime,
-                .persoNumber {
+                .field {
                     width: 100%;
                 }
             }
@@ -338,9 +339,7 @@ li {
         .reservation {
             .reservationForms {
                 margin-bottom: 65px;
-                .selectDate,
-                .selectTime,
-                .persoNumber {
+                .field {
                     height: 60px;
                 }
             }

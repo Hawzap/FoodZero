@@ -24,46 +24,78 @@ const splitText = (element) => {
     });
 };
 
+const checkWidth = window.innerWidth > 768;
+
 gsap.registerPlugin(ScrollTrigger);
 
 const titleTl = gsap.timeline();
 
 titleTl
     .from(".title h1", {
-        x: 120,
+        ...(checkWidth ? { x: 120 } : { y: -120 }),
         opacity: 0,
         duration: 0.6,
     })
     .from(
         ".title p",
         {
-            x: 100,
+            x: checkWidth ? 100 : -100,
             opacity: 0,
             duration: 0.6,
         },
         "-=0.45"
     );
 
-gsap.from(".ourStory-content img", {
-    x: 105,
-    y: -145,
-    opacity: 0,
-    duration: 0.6,
-    scrollTrigger: {
-        trigger: ".ourStory-content",
-        start: "0 45%",
-    },
-});
-gsap.from(".ourStory-content div", {
-    x: -105,
-    y: -145,
-    opacity: 0,
-    duration: 0.6,
-    scrollTrigger: {
-        trigger: ".ourStory-content",
-        start: "0 45%",
-    },
-});
+if (checkWidth) {
+    gsap.from(".ourStory-content img", {
+        x: 105,
+        y: -145,
+        opacity: 0,
+        duration: 0.6,
+        scrollTrigger: {
+            trigger: ".ourStory-content",
+            start: "0 45%",
+        },
+    });
+    gsap.from(".ourStory-content div", {
+        x: -105,
+        y: -145,
+        opacity: 0,
+        duration: 0.6,
+        scrollTrigger: {
+            trigger: ".ourStory-content",
+            start: "0 45%",
+        },
+    });
+} else {
+    gsap.from(".ourStory-content img", {
+        y: 145,
+        opacity: 0,
+        duration: 0.6,
+        scrollTrigger: {
+            trigger: ".ourStory-content",
+            start: "0 45%",
+        },
+    });
+    gsap.from(".ourStory-content div h2", {
+        x: -105,
+        opacity: 0,
+        duration: 0.6,
+        scrollTrigger: {
+            trigger: ".ourStory-content",
+            start: "0 45%",
+        },
+    });
+    gsap.from(".ourStory-content div p", {
+        x: 105,
+        opacity: 0,
+        duration: 0.6,
+        scrollTrigger: {
+            trigger: ".ourStory-content",
+            start: "0 45%",
+        },
+    });
+}
 
 const employees = document.querySelectorAll(".employee");
 
@@ -73,7 +105,6 @@ employees.forEach((e) => {
     const employeeName = mainInfo.children[1];
     const employeePhotoBlock = mainInfo.children[2];
     const employeeImg = employeePhotoBlock.children[0];
-    const employeeDesc = employeePhotoBlock.children[1];
     splitText(employeeOccupation);
     splitText(employeeName);
     const employeeOccupationSpan = employeeOccupation.querySelectorAll("span");

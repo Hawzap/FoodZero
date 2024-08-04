@@ -25,7 +25,7 @@ gsap.from(".mintDrink .description h2", {
     scrollTrigger: mintScrollTrigger,
 });
 gsap.from(".mintDrink .description p", {
-    x: 65,
+    x: window.innerWidth > 480 ? 65 : -65,
     opacity: 0,
     duration: 0.5,
     delay: 0.2,
@@ -52,7 +52,7 @@ gsap.from(".bestSalmon .description h2", {
     },
 });
 gsap.from(".bestSalmon .description p", {
-    x: 65,
+    x: window.innerWidth > 480 ? 65 : -65,
     opacity: 0,
     duration: 0.5,
     delay: 0.1,
@@ -108,14 +108,24 @@ gsap.from(".previousPage .switch", {
     },
 });
 
-gsap.from(".previousPage h3", {
+const pageSwitcherProp = {
     y: 40,
     opacity: 0,
     duration: 0.6,
     scrollTrigger: {
-        trigger: ".previousPage",
+        trigger: ".pageSwitcher-content",
         start: "-10% 70%",
     },
+};
+
+gsap.from(".previousPage h3", {
+    ...pageSwitcherProp,
+    ...(window.innerWidth > 768
+        ? {}
+        : {
+              y: 0,
+              x: 60,
+          }),
 });
 
 gsap.from(".nextPage .switch", {
@@ -129,11 +139,15 @@ gsap.from(".nextPage .switch", {
 });
 
 gsap.from(".nextPage h3", {
-    y: 40,
-    opacity: 0,
-    duration: 0.6,
-    scrollTrigger: {
-        trigger: ".nextPage",
-        start: "-10% 70%",
-    },
+    ...pageSwitcherProp,
+    ...(window.innerWidth > 768
+        ? {}
+        : {
+              y: 0,
+              x: -60,
+              scrollTrigger: {
+                  trigger: ".pageSwitcher-content",
+                  start: "0% 65%",
+              },
+          }),
 });

@@ -2,7 +2,7 @@
 
 header {
     display: block;
-    @include setBackgroundImage("../img/foodDescBg.png");
+    @include setBackgroundImage("../img/foodDescBg.png", "cover");
     margin: 0;
     padding-bottom: 300px;
     .headerContent {
@@ -25,6 +25,7 @@ header {
 .foodTypes {
     padding-top: 25px;
     padding-bottom: 170px;
+    overflow-x: hidden;
     .description {
         max-width: 385px;
         h2 {
@@ -94,6 +95,7 @@ header {
 // ===== PAGE SWITCHER =====
 
 .pageSwitcher {
+    overflow-x: hidden;
     background-color: #ebf0e4;
     padding: 125px 0;
     .pageSwitcher-content {

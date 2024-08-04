@@ -2,7 +2,7 @@
 
 header {
     display: block;
-    @include setBackgroundImage("../img/getInTouchBg.png");
+    @include setBackgroundImage("../img/getInTouchBg.png", "cover");
     margin: 0;
     padding-bottom: 130px;
     .headerContent {
@@ -145,6 +145,7 @@ header {
 .makingReservation {
     padding: 150px 0;
     background-color: #ebf0e4;
+    overflow-x: hidden;
     .reservationTitle {
         position: relative;
         margin-bottom: 100px;
@@ -241,6 +242,7 @@ header {
             .workTime {
                 display: flex;
                 justify-content: center;
+                overflow-x: hidden;
                 .workTime-wrapper {
                     width: 550px;
                     .openTime {

@@ -275,10 +275,13 @@ li {
   .makingReservation {
     padding: 130px 0;
   }
+  .makingReservation .reservation .reservationForms .fieldWrapper {
+    width: calc(33.3333333333% - 25px);
+  }
   .makingReservation .reservation .reservationForms .selectDate,
   .makingReservation .reservation .reservationForms .selectTime,
   .makingReservation .reservation .reservationForms .persoNumber {
-    width: calc(33.3333333333% - 25px);
+    width: 100%;
   }
 }
 @media (max-width: 768px) {
@@ -304,9 +307,7 @@ li {
         flex-wrap: wrap;
   }
   .makingReservation .reservation .reservationForms .fieldWrapper,
-  .makingReservation .reservation .reservationForms .selectDate,
-  .makingReservation .reservation .reservationForms .selectTime,
-  .makingReservation .reservation .reservationForms .persoNumber {
+  .makingReservation .reservation .reservationForms .field {
     width: 100%;
   }
 }
@@ -350,9 +351,7 @@ li {
   .makingReservation .reservation .reservationForms {
     margin-bottom: 65px;
   }
-  .makingReservation .reservation .reservationForms .selectDate,
-  .makingReservation .reservation .reservationForms .selectTime,
-  .makingReservation .reservation .reservationForms .persoNumber {
+  .makingReservation .reservation .reservationForms .field {
     height: 60px;
   }
   .makingReservation .reservation .booking {

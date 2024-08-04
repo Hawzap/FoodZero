@@ -34,7 +34,7 @@ header .subheader p {
   width: 500px;
   height: 290px;
   background-image: url(../../common/icons/blueberry.png);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -68,7 +68,7 @@ header .subheader p {
   width: 265px;
   height: 265px;
   background-image: url(../../common/icons/avocado.png);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -298,6 +298,18 @@ header .subheader p {
   }
 }
 @media (max-width: 480px) {
+  header {
+    padding-bottom: 150px;
+  }
+  header .headerContent {
+    margin-bottom: 120px;
+  }
+  header .subheader h1 {
+    font-size: 75px;
+  }
+  header .subheader p {
+    font-size: 18px;
+  }
   .meals {
     padding-bottom: 150px;
   }

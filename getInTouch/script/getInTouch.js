@@ -16,7 +16,14 @@ titleTl
         "-=0.3"
     );
 const openTimeTl = gsap.timeline({
-    delay: 0.4,
+    ...(window.innerWidth > 768
+        ? { delay: 0.4 }
+        : {
+              scrollTrigger: {
+                  trigger: ".workTime",
+                  start: "0% 95%",
+              },
+          }),
 });
 
 openTimeTl

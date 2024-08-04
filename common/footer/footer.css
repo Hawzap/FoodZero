@@ -1,4 +1,5 @@
 footer {
+  overflow-x: hidden;
   color: white;
   padding: 100px 0 45px 0;
   background-color: #233000;
